@@ -22,7 +22,7 @@ const showingNavigationDropdown = ref(false);
                         <div class="flex">
                             <!-- Logo -->
                             <div class="flex shrink-0 items-center">
-                                <Link :href="route('dashboard')">
+                                <Link :href="route('home')">
                                     <ApplicationLogo
                                         class="block h-9 w-auto fill-current text-gray-800"
                                     />
@@ -33,11 +33,17 @@ const showingNavigationDropdown = ref(false);
                             <div
                                 class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
                             >
-                                <NavLink
+                                <!-- <NavLink
                                     :href="route('dashboard')"
                                     :active="route().current('dashboard')"
                                 >
                                     Dashboard
+                                </NavLink> -->
+                                <NavLink
+                                    :href="route('recipes.create')"
+                                    :active="route().current('recipes.create')"
+                                >
+                                    Tambah Resep
                                 </NavLink>
                             </div>
                         </div>
@@ -76,6 +82,8 @@ const showingNavigationDropdown = ref(false);
                                         >
                                             Profile
                                         </DropdownLink>
+                                        <DropdownLink :href="route('favorites.index')"> Favorit Saya </DropdownLink>
+                                        <DropdownLink :href="route('recipes.mine')"> Resep Saya </DropdownLink>
                                         <DropdownLink
                                             :href="route('logout')"
                                             method="post"
