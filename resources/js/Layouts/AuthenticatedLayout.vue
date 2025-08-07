@@ -45,6 +45,12 @@ const showingNavigationDropdown = ref(false);
                                 >
                                     Tambah Resep
                                 </NavLink>
+                                <NavLink
+                                    :href="route('articles.create')"
+                                    :active="route().current('articles.create')"
+                                >
+                                    Tambah Artikel
+                                </NavLink>
                             </div>
                         </div>
 
@@ -84,6 +90,7 @@ const showingNavigationDropdown = ref(false);
                                         </DropdownLink>
                                         <DropdownLink :href="route('favorites.index')"> Favorit Saya </DropdownLink>
                                         <DropdownLink :href="route('recipes.mine')"> Resep Saya </DropdownLink>
+                                        <DropdownLink :href="route('articles.mine')"> Artikel Saya </DropdownLink>
                                         <DropdownLink
                                             :href="route('logout')"
                                             method="post"

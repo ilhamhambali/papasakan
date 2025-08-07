@@ -30,7 +30,7 @@ defineProps({
                     <!-- Gambar Artikel (jika ada) -->
                     <img
                         v-if="article.image"
-                        :src="article.image"
+                        :src="article.image ? `/storage/${article.image}` : 'https://placehold.co/600x400/e2e8f0/e2e8f0?text=Resep'"
                         :alt="article.title"
                         class="w-full h-auto object-cover rounded-lg mt-6"
                     >
