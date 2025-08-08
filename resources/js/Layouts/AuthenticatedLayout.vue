@@ -208,6 +208,7 @@ const showingNavigationDropdown = ref(false);
             <main>
                 <slot />
             </main>
+            <ChatWidget />
         </div>
     </div>
 </template>

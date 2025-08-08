@@ -4,6 +4,7 @@ import { computed } from 'vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
+import ChatWidget from '@/Components/ChatWidget.vue';
 
 // Cek status login dari props yang dibagikan oleh Inertia
 const user = computed(() => usePage().props.auth.user);
@@ -72,5 +73,6 @@ const user = computed(() => usePage().props.auth.user);
         <main>
             <slot />
         </main>
+        <ChatWidget />
     </div>
 </template>

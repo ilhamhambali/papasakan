@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\AiChatController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -35,6 +36,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
+
+Route::post('/ai-chat', [AiChatController::class, 'chat'])->name('ai.chat');
 
 // Route bawaan Breeze untuk Dashboard
 Route::get('/dashboard', function () {
